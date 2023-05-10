@@ -4,7 +4,7 @@
 # For our project, we generate this file through a build process
 # from other source files.
 # We need to make sure the checked-in `index.js` actually matches what we expect it to be.
-name: Check dist/
+name: Check dist
 
 on:
   push:
@@ -30,6 +30,9 @@ jobs:
   
       - name: Install dependencies
         run: npm ci
+
+      - name: Move the committed index.js file
+        run: mv dist/index.js /tmp
 
       - name: Rebuild with tsc
         run: npm run build
