@@ -26,7 +26,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set Node.js 16.x
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: 16.x
 
@@ -130,7 +130,7 @@ jobs:
     
     # Download Artifact #3 and verify the correctness of the content
     - name: 'Download artifact #3'
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: 'GZip-Artifact'
         path: gzip/artifact/path
@@ -150,7 +150,7 @@ jobs:
       shell: pwsh
 
     - name: 'Download artifact #4'
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: 'Multi-Path-Artifact'
         path: multi/artifact
