@@ -23,12 +23,12 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-    - name: Setup Node 16
-      uses: actions/setup-node@v3
+    - name: Setup Node 20
+      uses: actions/setup-node@v4
       with:
-        node-version: 16.x
+        node-version: 20.x
         cache: 'npm'
 
     - name: Install dependencies
@@ -88,7 +88,7 @@ jobs:
 
     # Download Artifact #1 and verify the correctness of the content
     - name: 'Download artifact #1'
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: 'Artifact-A'
         path: some/new/path
@@ -108,7 +108,7 @@ jobs:
 
     # Download Artifact #2 and verify the correctness of the content
     - name: 'Download artifact #2'
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: 'artifact'
         path: some/other/path
@@ -129,7 +129,7 @@ jobs:
 
     # Download Artifact #3 and verify the correctness of the content
     - name: 'Download artifact #3'
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: 'GZip-Artifact'
         path: gzip/artifact/path
@@ -149,7 +149,7 @@ jobs:
       shell: pwsh
 
     - name: 'Download artifact #4'
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: 'Multi-Path-Artifact'
         path: multi/artifact
